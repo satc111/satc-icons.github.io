@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrie Bradshaw - Sex and the City Fashion</title>
+    <style>
+        /* Basic styles for full-page layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-image: url('satc.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100%; /* Ensures the body is always at least 100% height */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #f8e1b4;
+            margin-top: 50px;
+            letter-spacing: 3px;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 100%;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left; /* Left text alignment for readability */
+            line-height: 1.8;
+            color: #f8b8d8; /* Soft hot pink text color */
+        }
+
+        /* Flex container for the cards */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between cards */
+            margin-top: 20px;
+        }
+
+        /* Floating Card Styles */
+        .floating-card {
+            background-color: rgba(255, 182, 193, 0.8); /* Soft pink with transparency */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            border-radius: 15px;
+            width: auto;  /* Card width adjusts to content (image) size */
+            max-width: 500px;  /* Max width to avoid stretching */
+            display: inline-block;
+            margin: 10px; /* Space between cards */
+            padding: 10px;  /* Padding inside card */
+            overflow: hidden; /* Ensures no content overflows */
+            text-align: center;  /* Center content inside the card */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-card img {
+            width: 100%;  /* Makes image take up the full width of the card */
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            object-fit: contain;  /* Ensures the image covers the area without stretching */
+        }
+
+        .floating-card:hover {
+            transform: translateY(-10px); /* Lifts the card slightly on hover */
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Enhances shadow effect */
+        }
+
+        .floating-card:hover img {
+            transform: scale(1.05); /* Slight zoom effect on the image */
+        }
+
+        footer {
+            font-size: 20px;
+            color: #f8e1b4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: auto; /* Pushes footer to the bottom */
+            padding-bottom: 20px; /* Adds spacing to the bottom of the footer */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 35px; /* Smaller font size for header */
+            }
+
+            .content {
+                font-size: 16px; /* Smaller content font */
+                padding: 15px; /* Reduced padding for better mobile experience */
+            }
+
+            footer {
+                font-size: 18px; /* Smaller footer font */
+            }
+
+            .cards-container {
+                flex-direction: column;
+                align-items: center; /* Stack cards vertically on small screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Carrie Bradshaw</h1>
+    <div class="content">
+        <p>Carrie Bradshaw's fashion style is a bold and eclectic mix of high fashion, vintage pieces, and an unapologetic love for all things glamorous, with her wardrobe often reflecting her personality — chic, playful, and fiercely independent. One of her most iconic fashion obsessions is her collection of Manolo Blahnik shoes, which became a symbol of both her sophisticated taste and her unyielding belief that the perfect pair of shoes could elevate any outfit, as well as her love for luxury and the finer things in life. Whether paired with a delicate tutu, a tailored suit, or her signature Cosmopolitan in hand, Carrie’s devotion to Manolos transcended mere footwear — they became an extension of her character, symbolizing confidence, elegance, and a touch of her romantic side.</p>
+        
+        <!-- Container for Floating Cards -->
+        <div class="cards-container">
+            <!-- Multiple Floating Cards with Images -->
+            <div class="floating-card">
+                <img src="carrie-icon1.jpg" alt="Carrie Bradshaw Fashion 1">
+            </div>
+            
+            <div class="floating-card">
+                <img src="carrie-icon2.jpg" alt="Carrie Bradshaw Fashion 2">
+            </div>
+
+            <div class="floating-card">
+                <img src="carrie-icon3.jpg" alt="Carrie Bradshaw Fashion 3">
+            </div>
+
+            <div class="floating-card">
+                <img src="carrie-icon4.jpg" alt="Carrie Bradshaw Fashion 4">
+            </div>
+        </div>
+    </div>
+
+    <footer>Fashion inspired by the iconic characters of 'Sex and the City'.</footer>
+</body>
+</html>
